@@ -1,5 +1,5 @@
-import express from 'express';
-import homeRoutes from './src/routes/homeRoutes'
+import express from "express";
+import homeRoutes from "./src/routes/homeRoutes";
 
 class App {
   constructor() {
@@ -9,12 +9,12 @@ class App {
   }
 
   middlewares() {
-    this.app.use(express.urlencoded({ extended: true }))
-    this.app.use(express.json())
+    this.app.use(express.urlencoded({ extended: true }));
+    this.app.use(express.json());
   }
 
   routes() {
-    this.app.use('/', homeRoutes);
+    this.app.use("/", homeRoutes);
   }
 }
 
