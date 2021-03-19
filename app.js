@@ -18,12 +18,12 @@ class App {
   database() {
     const authentication = async () => {
       try {
-        await connection.authenticate()
-        return console.log('database connect')
-      } catch (err) {
-        return console.log(`database not connected ${err}`)
+        await connection.authenticate();
+        return console.log("database connect");
+      } catch (error) {
+        return console.log(`database not connected ${error}`);
       }
-    }
+    };
 
     authentication();
   }
